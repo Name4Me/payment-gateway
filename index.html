@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Demo payments</title>
+        <script src="https://js.braintreegateway.com/v1/braintree.js"></script>
+    </head>
+    <body>
+        <form action="src/engine.php" method="post" id="braintree-payment-form">
+
+            <section>
+                <h3>Order section:</h3>
+                <label>Price:</label>
+                <input type="text" name="price" value="10">
+                <select name="currency">
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="THB">THB</option>
+                    <option value="HKD">HKD</option>
+                    <option value="SGD">SGD</option>
+                    <option value="AUD">AUD</option>
+                </select>
+                <br>
+                <label>Full Name</label>
+                <input type="text" name="customerFullName" value="Roman Tsapik">
+            </section>
+            <section>
+                <h3>Payment section:</h3>
+                <h4>Credit card:</h4>
+                <label>Holder name</label>
+                <input type="text" name="creditCardHolderName" value="Roman Tsapik">
+                <br>
+                <label>Number</label>
+                <input type="text" name="creditCardNumber" value="4111111111111111">
+                <br>
+                <label>Expiration</label>
+                <input type="text" name="creditCardExpiration" value="05/20">
+                <br>
+                <label>CCV</label>
+                <input type="text" name="creditCardCCV" value="111">
+                <br>
+                <input type="submit" value="Submit" name="submitBtn" id="submit">
+                <br>
+            </section>
+            <div id='log' />
+
+        </form>
+    </body>
+</html>
