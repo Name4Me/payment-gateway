@@ -1,11 +1,11 @@
 # payment-gateway
 
-</h2>Important!</h2>
-<p>
-Before testing you need set values in <font style="color:red;">config.ini</font>config.ini
+##Important!
 
-You must understand that Braintree api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
+###Before testing you need set values in <font style="color:red;">config.ini</font>config.ini
 
+###You must understand that Braintree api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
+<div>
 Visa
     4111111111111111
     4005519200000004
@@ -28,14 +28,14 @@ Discover
     
 JCB
     3530111333300000
-</p>
-<p>
-PayPal api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
+</div>
 
+###PayPal api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
+<div>
 Visa
     4417119669820331
     
 MasterCard
     5500005555555559
     5493022963692972
-</p>
+</div>
