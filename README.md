@@ -2,10 +2,14 @@
 
 ##Important!
 
-###Before testing you need set values in <font style="color:red;">config.ini</font>config.ini
+Before testing you need set values in 
+###config.ini
 
-###You must understand that Braintree api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
+You must understand that Braintree api in 'sandbox' mode, 
+###work only
+with card:
 <div>
+```bash
 Visa
     4111111111111111
     4005519200000004
@@ -28,6 +32,7 @@ Discover
     
 JCB
     3530111333300000
+    ```
 </div>
 
 ###PayPal api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
