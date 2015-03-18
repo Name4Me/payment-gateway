@@ -3,7 +3,9 @@
 Important!
 
 Before testing you need set values in config.ini
+
 You must understand that Braintree api in 'sandbox' mode, work only with card:
+
 Visa
     4111111111111111
     4005519200000004
@@ -13,19 +15,25 @@ Visa
     4012888888881881
     4217651111111119
     4500600000000061
+    
 MasterCard
     5555555555554444
+    
 American Express
     378282246310005
     371449635398431
+    
 Discover
     6011111111111117
+    
 JCB
     3530111333300000
 
 PayPal api in 'sandbox' mode, work only with card:
+
 Visa
     4417119669820331
+    
 MasterCard
     5500005555555559
     5493022963692972
