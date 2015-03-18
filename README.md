@@ -6,10 +6,7 @@ Before testing you need set values in
 ###config.ini
 
 You must understand that Braintree api in 'sandbox' mode, 
-###work only
-with card:
-<div>
-```bash
+###work only with card:
 Visa
     4111111111111111
     4005519200000004
@@ -31,16 +28,13 @@ Discover
     6011111111111117
     
 JCB
-    3530111333300000
-    ```
-</div>
-
-###PayPal api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
-<div>
+    353011133330000
+    
+PayPal api in 'sandbox' mode, 
+###work only with card:
 Visa
     4417119669820331
     
 MasterCard
     5500005555555559
     5493022963692972
-</div>
