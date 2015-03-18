@@ -2,9 +2,9 @@
 
 </h2>Important!</h2>
 <p>
-Before testing you need set values in <font color="reed">config.ini</font>config.ini
+Before testing you need set values in <font style="color:red;">config.ini</font>config.ini
 
-You must understand that Braintree api in 'sandbox' mode, <font color="reed">work only</font> with card:
+You must understand that Braintree api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
 
 Visa
     4111111111111111
@@ -30,7 +30,7 @@ JCB
     3530111333300000
 </p>
 <p>
-PayPal api in 'sandbox' mode, <font color="reed">work only</font> with card:
+PayPal api in 'sandbox' mode, <font style="color:red;">work only</font> with card:
 
 Visa
     4417119669820331
