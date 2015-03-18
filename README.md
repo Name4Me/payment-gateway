@@ -4,9 +4,7 @@
 
 Before testing you need set values in 
 ###config.ini
-
-You must understand that Braintree api in 'sandbox' mode, 
-###work only with card:
+###You must understand that Braintree api in 'sandbox' mode, work only with card:
 Visa
     4111111111111111
     4005519200000004
@@ -29,9 +27,7 @@ Discover
     
 JCB
     353011133330000
-    
-PayPal api in 'sandbox' mode, 
-###work only with card:
+###PayPal api in 'sandbox' mode, work only with card:
 Visa
     4417119669820331
     
