@@ -20,8 +20,9 @@
 <?php
 
     require_once dirname(__DIR__) . '/vendor/autoload.php';
-    require_once __DIR__ .'/BraintreePayment';
+    require_once __DIR__ .'/BraintreePayment.php';
     require_once __DIR__ .'/PayPalPayment.php';
+    require_once __DIR__ .'/common.php';
 
     try {
         $ini_array = parse_ini_file(dirname(__DIR__) . "/config/config.ini",true);
@@ -37,7 +38,7 @@
         );
 
         $payment->setCustomer($_POST['customerFullName']);
-        
+
         if ($payment->is_Customer()) $payment->setCreditCard(
             $_POST['creditCardHolderName'],
             $_POST['creditCardNumber'],
@@ -45,8 +46,12 @@
             $_POST['creditCardCCV']
         );
 
-        if ($payment->is_CreditCard()) {
-            switch ($payment->getCreditCard()->cardType) {
+        if ($payment->is_CreditCard()) $cardType = $payment->getCreditCard()->cardType;
+            elseif ($ini_array[$configBranch]['environment'] == 'sandbox')
+                $cardType = cardTypeByNumber($_POST['creditCardNumber']);
+
+        if (!empty($cardType)) {
+            switch ($cardType) {
                 //if credit card type is AMEX, then use Paypal.
                 case 'American Express':
                     $paymentMethod = 'Paypal';
@@ -62,7 +67,10 @@
                     else $paymentMethod = 'Braintree';
                     break;
             }
-        } else $message = $payment->getCreditCard();
+        } else {
+            $message = 'Error Unknown Card Type.';
+            return;
+        }
 
         switch ($paymentMethod) {
             case "Braintree":
@@ -82,7 +90,7 @@
                     $_POST['creditCardNumber'],
                     $_POST['creditCardExpiration'],
                     $_POST['creditCardCCV'],
-                    $payment->getCreditCard()->cardType
+                    $cardType
                 );
 
                 $message = $paypalPayment->doPayment($_POST['price'],$_POST['currency']);
@@ -90,7 +98,7 @@
         }
 
 
-    } catch (\Exception $e) {
+    } catch (Exception $e) {
         $message .= '<p>error: '.'\n'.$e->getMessage().'</p>';
     }
 
