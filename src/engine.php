@@ -36,7 +36,9 @@
             $ini_array[$configBranch]['privateKey']
         );
 
-        if ($payment->setCustomer($_POST['customerFullName'])) $payment->setCreditCard(
+        $payment->setCustomer($_POST['customerFullName']);
+        
+        if ($payment->is_Customer()) $payment->setCreditCard(
             $_POST['creditCardHolderName'],
             $_POST['creditCardNumber'],
             $_POST['creditCardExpiration'],
