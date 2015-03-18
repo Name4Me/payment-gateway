@@ -34,7 +34,7 @@ class EngineTest extends PHPUnit_Framework_TestCase {
             'THK',
             '111'
         );
-        $this->assertStringStartsWith($result,'<p>error:');
+        $this->assertStringStartsWith('<p>error:',$result);
         $result = paymentGateway(
             'Name Surname',
             'Name Surname',
